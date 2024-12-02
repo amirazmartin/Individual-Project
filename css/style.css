@@ -35,7 +35,7 @@ a {
 
 .nav-links a {
   font-weight: 500;
-  color: #0A53B2;
+  color: #ffffff;
   transition: color 0.3s;
 }
 
@@ -51,7 +51,7 @@ a {
 
 .btn {
   padding: 0.5rem 1rem;
-  background-color: #0054AD;
+  background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -75,84 +75,47 @@ a {
   text-align: center; /* Center-align text */
 }
 
-.hero-img {
-  position: absolute; /* Allows positioning */
-  top: 260px; /* Distance from the top */
-  right: 620px; /* Distance from the right */
-  width: 360px; /* Initial size */
-  height: 360px; /* Same as width */
-  border-radius: 50%; /* Circular shape */
-  object-fit: cover; /* Prevents distortion */
-  object-position: center center; /* Center the image within the circle */
-}
-
 .hero2-img {
-  position: absolute; /* Allows positioning */
-  top: 220px; /* Distance from the top */
-  right: 220px; /* Distance from the right */
-  width: 300px; /* Initial size */
-  height: 300px; /* Same as width */
-  border-radius: 50%; /* Circular shape */
-  object-fit: cover; /* Prevents distortion */
-  object-position: center center; /* Center the image within the circle */
+  position: absolute;
+  top: 70%; /* Centers vertically */
+  right: 50%; /* Centers horizontally based on container size */
+  transform: translate(50%, -50%); /* Adjusts for element's size */
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
 }
 
-.hero3-img {
-  position: absolute; /* Allows positioning */
-  top: 220px; /* Distance from the top */
-  right: 1000px; /* Distance from the right */
-  width: 300px; /* Initial size */
-  height: 300px; /* Same as width */
+/* Default styles for images */
+ .hero2-img {
+  width: 300px; /* Default size */
+  height: 300px; /* Match width for perfect circle */
   border-radius: 50%; /* Circular shape */
-  object-fit: cover; /* Prevents distortion */
-  object-position: center center; /* Center the image within the circle */
+  object-fit: cover; /* Prevents image distortion */
+  object-position: center center; /* Centers the image within the circle */
+  transition: all 0.3s ease; /* Smooth scaling or resizing */
+}
+
+/* Responsive styles for larger screens */
+@media (min-width: 768px) {
+ .hero2-img {
+    width: 340px; /* Larger size for bigger screens */
+    height: 340px;
+  }
 }
 
 /* Default styles for smaller screens */
-.hero-img {
-  top: 300px; /* Adjust distance from top for smaller screens */
-  right: 150px; /* Closer to the right edge */
-  width: 225px; /* Smaller size for mobile */
-  height: 225px; /* Match width for a perfect circle */
+
+/* Container to center the images */
+.hero-container {
+  display: flex;
+  justify-content: center; /* Centers the images horizontally */
+  align-items: center; /* Aligns the images vertically in the container */
+  gap: 20px; /* Adds spacing between the images */
+  flex-wrap: wrap; /* Ensures responsiveness by wrapping images on smaller screens */
+  padding: 20px; /* Optional padding for aesthetics */
+  text-align: center; /* Centers content within the container */
 }
 
-.hero2-img {
-  top: 450px; /* Adjust distance from top for smaller screens */
-  right: 10px; /* Closer to the right edge */
-  width: 170px; /* Smaller size for mobile */
-  height: 170px; /* Match width for a perfect circle */
-}
-
-.hero3-img {
-  top: 470px; /* Adjust distance from top for smaller screens */
-  right: 340px; /* Closer to the right edge */
-  width: 150px; /* Smaller size for mobile */
-  height: 150px; /* Match width for a perfect circle */
-}
-
-/* Media query for larger screens */
-@media (min-width: 768px) {
-  .hero-img {
-    top: 240px;
-    right: 620px;
-    width: 360px;
-    height: 360px;
-  }
-
-  .hero2-img {
-    top: 220px;
-    right: 220px;
-    width: 300px;
-    height: 300px;
-  }
-
-  .hero3-img {
-    top: 220px;
-    right: 1100px;
-    width: 300px;
-    height: 300px;
-  }
-}
 
 
 .hero-content {
@@ -224,7 +187,7 @@ a {
 :root {
   --background-color: #ffffff;
   --text-color: #000000;
-  --link-color: #1877F2;
+  --link-color: #073e87;
   --button-background: #f0f0f0;
   --button-color: #000000;
 }

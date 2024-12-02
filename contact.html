@@ -57,6 +57,23 @@
     </section>
   </main>
 
+  <script>
+   // Check for saved theme preference in localStorage
+   const savedTheme = localStorage.getItem('theme');
+   if (savedTheme) {
+     document.documentElement.setAttribute('data-theme', savedTheme);
+   }
+ 
+   // Function to toggle theme
+   function toggleTheme() {
+     const currentTheme = document.documentElement.getAttribute('data-theme');
+     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+     document.documentElement.setAttribute('data-theme', newTheme);
+     localStorage.setItem('theme', newTheme); // Save preference
+   }
+ </script>
+
+<button onclick="toggleTheme()">Toggle Light/Dark Mode</button>
   <footer>
     <div class="container">
       <p>&copy; 2024 Utica Church of Christ. All rights reserved.</p>
