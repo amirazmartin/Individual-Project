@@ -35,7 +35,7 @@ a {
 
 .nav-links a {
   font-weight: 500;
-  color: #d7d7d7;
+  color: #0B55B7;
   transition: color 0.3s;
 }
 
@@ -51,7 +51,7 @@ a {
 
 .btn {
   padding: 0.5rem 1rem;
-  background-color: #007bff;
+  background-color: #0054AD;
   color: #fff;
   border: none;
   border-radius: 5px;
