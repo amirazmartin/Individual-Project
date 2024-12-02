@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to the Utica Church of Christ - A place to grow in faith and community. Join us for worship, Bible studies, and fellowship.">
+  <title>Utica Church of Christ</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">UTICA CHURCH OF CHRIST</a>
+        <ul class="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="images/UticaChurchBuilding_Enhanced.jpg" alt="Welcome to Utica Church of Christ" class="hero-img">
+    <img src="images/rainbow.jpeg" alt="Welcome to Utica Church of Christ" class="hero2-img">
+    <img src="images/ChurchMembersHomePicture.jpg" alt="Welcome to Utica Church of Christ" class="hero3-img">
+    <div class="hero-content">
+      <h1>Welcome to Utica Church of Christ</h1>
+      <a href="inperson-service.html" class="btn">Join in person</a>
+      <a href="online-service.html" class="btn">Join online</a>
+      <p>Let us not grow weary of doing good, for in due season we will reap, if we do not give up Galatians 6:9 </p>
+    </div>
+  </section>
+  
+      
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>The Utica Church of Christ is a welcoming congregation where you can deepen your faith, worship in community, and build lasting relationships. We are rooted in scripture and committed to living out the teachings of Christ.</p>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <ul>
+          <li>Sunday Worship: 10:00 AM</li>
+          <li>Bible Study: Wednesday at 7:00 PM</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="events" class="events">
+      <div class="container">
+        <h2>Upcoming Events</h2>
+        <p>Stay tuned for special worship services, community outreach programs, and holiday celebrations.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>If you have questions or would like to learn more, please reach out!</p>
+        <p>Email: <a href="mailto:contact_us@uticachurchofchrist.com">contact_us@uticachurchofchrist.com</a></p>
+        <p>Phone: (586) 731-2290</p>
+        <p>13505 Nineteen Mile Road, Sterling Heights, MI, United States, Michigan</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Utica Church of Christ. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+<script>
+    // Check for saved theme preference in localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+  
+    // Function to toggle theme
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme); // Save preference
+    }
+  </script>
+
+<button onclick="toggleTheme()">Toggle Light/Dark Mode</button>
+
+</body>
+</html>
+
+  

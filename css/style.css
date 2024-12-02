@@ -1,0 +1,266 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #041935;
+  
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  background: linear-gradient(#2549c0, #123d81); /* 45-degree gradient */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  color: #d7d7d7;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #dda7d4;
+}
+
+.logo {
+  font-size: 0.5 rem;
+  font-weight: 700;
+  color: #d8e9fb;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(#a0c6f9, #3b72a0, #296fb9); /* 45-degree gradient */
+  position: relative; /* Allows absolute positioning inside it */
+  height: 80vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: flex-start; /* Push content to the top */
+  text-align: center; /* Center-align text */
+}
+
+.hero-img {
+  position: absolute; /* Allows positioning */
+  top: 260px; /* Distance from the top */
+  right: 620px; /* Distance from the right */
+  width: 360px; /* Initial size */
+  height: 360px; /* Same as width */
+  border-radius: 50%; /* Circular shape */
+  object-fit: cover; /* Prevents distortion */
+  object-position: center center; /* Center the image within the circle */
+}
+
+.hero2-img {
+  position: absolute; /* Allows positioning */
+  top: 220px; /* Distance from the top */
+  right: 220px; /* Distance from the right */
+  width: 300px; /* Initial size */
+  height: 300px; /* Same as width */
+  border-radius: 50%; /* Circular shape */
+  object-fit: cover; /* Prevents distortion */
+  object-position: center center; /* Center the image within the circle */
+}
+
+.hero3-img {
+  position: absolute; /* Allows positioning */
+  top: 220px; /* Distance from the top */
+  right: 1000px; /* Distance from the right */
+  width: 300px; /* Initial size */
+  height: 300px; /* Same as width */
+  border-radius: 50%; /* Circular shape */
+  object-fit: cover; /* Prevents distortion */
+  object-position: center center; /* Center the image within the circle */
+}
+
+/* Default styles for smaller screens */
+.hero-img {
+  top: 300px; /* Adjust distance from top for smaller screens */
+  right: 150px; /* Closer to the right edge */
+  width: 225px; /* Smaller size for mobile */
+  height: 225px; /* Match width for a perfect circle */
+}
+
+.hero2-img {
+  top: 450px; /* Adjust distance from top for smaller screens */
+  right: 10px; /* Closer to the right edge */
+  width: 170px; /* Smaller size for mobile */
+  height: 170px; /* Match width for a perfect circle */
+}
+
+.hero3-img {
+  top: 470px; /* Adjust distance from top for smaller screens */
+  right: 340px; /* Closer to the right edge */
+  width: 150px; /* Smaller size for mobile */
+  height: 150px; /* Match width for a perfect circle */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .hero-img {
+    top: 240px;
+    right: 620px;
+    width: 360px;
+    height: 360px;
+  }
+
+  .hero2-img {
+    top: 220px;
+    right: 220px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero3-img {
+    top: 220px;
+    right: 1100px;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 2.0rem;
+  margin-top: 70px; /* Move the text up */
+  margin-bottom: 1rem;
+  font-weight: 00;
+  color: #fff;
+}
+
+.online-page .hero {
+  display: none; /* Hides the hero section */
+}
+.inperson-page .hero {
+  display: none; /* Hides the hero section */
+} 
+.services-page .hero {
+  display: none; /* Hides the hero section */
+}
+.contact-page .hero {
+  display: none; /* Hides the hero section */
+}
+
+.photo-gallery .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.photo-gallery .gallery img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.photo-gallery .gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Default transitions */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+img {
+  transition: transform 0.3s ease;
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+/* Prefers reduced motion: Disable transitions and animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Default light mode (root styles) */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --link-color: #1877F2;
+  --button-background: #f0f0f0;
+  --button-color: #000000;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --background-color: #181818;
+  --text-color: #ffffff;
+  --link-color: #4e9cff;
+  --button-background: #333333;
+  --button-color: #ffffff;
+}
+
+/* Apply the variables */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: var(--link-color);
+  transition: color 0.3s ease;
+}
+
+button {
+  background-color: var(--button-background);
+  color: var(--button-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
